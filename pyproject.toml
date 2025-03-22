@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "oop-practic"
+version = "0.1.0"
+description = ""
+authors = ["Sergey Bordeychuk <twnue2020@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flake8 = "^7.1.2"
+mypy = "^1.15.0"
+isort = "^6.0.1"
+black = "^25.1.0"
+pandas = "^2.2.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
