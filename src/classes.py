@@ -54,4 +54,5 @@ class Category:
 
 
     def add_product(self, product):
-        self.__products.append(product)
+        if isinstance(product, Product) or issubclass(product, Product):
+            self.__products.append(product)
