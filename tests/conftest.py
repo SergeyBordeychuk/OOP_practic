@@ -26,3 +26,7 @@ def category_fruits(banana) -> Category:
 @pytest.fixture
 def category_weapon(sword, katana) -> Category:
     return Category("Weapon", "Оружия", [sword, katana])
+
+@pytest.fixture
+def apple() -> Product:
+    return Product("Apple", "Фрукт красного цвета", 120, 100)
