@@ -20,3 +20,7 @@ def test_getter(category_fruits, category_weapon):
 def test_add_product(category_fruits, apple):
     category_fruits.add_product(apple)
     assert category_fruits.products == ["Banan, 100 руб. Остаток: 125 шт.", "Apple, 120 руб. Остаток: 100 шт."]
+
+
+def test_str(category_weapon):
+    assert str(category_weapon) == 'Weapon, количество продуктов: 15 шт.'
