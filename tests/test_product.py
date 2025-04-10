@@ -17,3 +17,7 @@ def test_new_product():
     assert new_product.price == 180000.0
     assert new_product.quantity == 5
 
+
+def test_str_and_add(banana, apple):
+    assert str(banana) == 'Banan, 100 руб. Остаток: 125 шт.'
+    assert banana + apple == 24500

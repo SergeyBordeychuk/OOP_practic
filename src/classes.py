@@ -11,6 +11,14 @@ class Product:
         self.quantity = quantity
 
 
+    def __str__(self):
+        return f'{self.name}, {self.__price} руб. Остаток: {self.quantity} шт.'
+
+
+    def __add__(self, other):
+        return (self.__price * self.quantity) + (other.__price * other.quantity)
+
+
     @classmethod
     def new_product(cls, dictionary):
         return cls(dictionary['name'], dictionary['description'], dictionary['price'], dictionary['quantity'])
@@ -43,6 +51,13 @@ class Category:
         Category.category_count += 1
         Category.product_count += len(products)
 
+
+    def __str__(self):
+        list_products = self.__products
+        quantity_products = 0
+        for i in list_products:
+            quantity_products += i.quantity
+        return f'{self.name}, количество продуктов: {quantity_products} шт.'
 
     @property
     def products(self):
