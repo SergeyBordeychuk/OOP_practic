@@ -16,7 +16,10 @@ class Product:
 
 
     def __add__(self, other):
-        return (self.__price * self.quantity) + (other.__price * other.quantity)
+        if type(self) == type(other):
+            return (self.__price * self.quantity) + (other.__price * other.quantity)
+        else:
+            return TypeError
 
 
     @classmethod
@@ -71,3 +74,29 @@ class Category:
     def add_product(self, product):
         if isinstance(product, Product) or issubclass(product, Product):
             self.__products.append(product)
+
+
+class Smartphone(Product):
+    efficiency: int
+    model: str
+    memory: int
+    color: str
+
+    def __init__(self, name, description, price, quantity, efficiency, model, memory, color):
+        super().__init__(name, description, price, quantity)
+        self.efficiency = efficiency
+        self.color = color
+        self.memory = memory
+        self.model = model
+
+
+class LawnGrass(Product):
+    country:str
+    germination_period: str
+    color: str
+
+    def __init__(self, name, description, price, quantity, country, germination_period, color):
+        super().__init__(name, description, price, quantity)
+        self.country = country
+        self.color = color
+        self.germination_period = germination_period

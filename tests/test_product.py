@@ -1,3 +1,5 @@
+from six import raise_from
+
 from src.classes import Product
 
 
@@ -21,3 +23,11 @@ def test_new_product():
 def test_str_and_add(banana, apple):
     assert str(banana) == 'Banan, 100 руб. Остаток: 125 шт.'
     assert banana + apple == 24500
+
+
+def test_subclasses(iphon, blue_grass):
+    assert iphon + blue_grass == TypeError
+    assert iphon.color == 'Gray space'
+    assert iphon.name == 'Iphone 15'
+    assert blue_grass.name == 'Газонная трава'
+    assert blue_grass.color == 'Синяя'

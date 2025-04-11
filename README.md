@@ -26,3 +26,5 @@ pip install -r requirements.txt
 ### Модуль classes:
 1. Класс Product -> принимает name, description, price и quantity
 2. Класс Category -> принимает name, description, products
+3. Дочерний класс Smartphone(Product) -> принимает name, description, price, quantity, color, model, memory и efficiency
+4. Дочерний класс LawnGrass(Product) -> принимает name, description, price, quantity, color, country и germination_period
