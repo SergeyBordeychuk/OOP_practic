@@ -24,7 +24,9 @@ pip install -r requirements.txt
 Все тесты находятся в пакете tests
 
 ### Модуль classes:
-1. Класс Product -> принимает name, description, price и quantity
-2. Класс Category -> принимает name, description, products
-3. Дочерний класс Smartphone(Product) -> принимает name, description, price, quantity, color, model, memory и efficiency
-4. Дочерний класс LawnGrass(Product) -> принимает name, description, price, quantity, color, country и germination_period
+1. Абстрактный класс BaseProduct -> принимает name, description, price и quantity
+2. Класс Product -> принимает name, description, price и quantity
+3. Класс Category -> принимает name, description, products
+4. Дочерний класс Smartphone(Product) -> принимает name, description, price, quantity, color, model, memory и efficiency
+5. Дочерний класс LawnGrass(Product) -> принимает name, description, price, quantity, color, country и germination_period
+6. Миксин PrintInfoMixin -> выводит класс и аргументы при создании объекта
