@@ -1,10 +1,27 @@
-class Product:
+from abc import ABC
+
+
+class BaseProduct(ABC):
+    name: str
+    description: str
+    price: int
+    quantity: int
+
+
+class PrintInfoMixin:
+
+    def __init__(self, *args, **kwargs):
+        print(f"Создан объект {self.__class__.__name__} с параметрами: {args} {kwargs}")
+
+
+class Product(BaseProduct, PrintInfoMixin):
     name: str
     description: str
     price: int
     quantity: int
 
     def __init__(self, name, description, price, quantity):
+        super().__init__(name, description, price, quantity)
         self.name = name
         self.description = description
         self.__price = price
