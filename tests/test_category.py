@@ -24,3 +24,9 @@ def test_add_product(category_fruits, apple):
 
 def test_str(category_weapon):
     assert str(category_weapon) == 'Weapon, количество продуктов: 15 шт.'
+
+
+def test_middle_price(category_weapon):
+    assert category_weapon.middle_price() == 1500
+    category_empty = Category("Пустая категория", "Категория без продуктов", [])
+    assert category_empty.middle_price() == 0

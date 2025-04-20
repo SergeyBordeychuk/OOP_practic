@@ -1,6 +1,6 @@
 # Проект OOP
 
-## ## Описание:
+## Описание:
 
 Проект OOP - это проект практика Объектно-Ориентированного Программирования
 
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 ### Модуль classes:
 1. Абстрактный класс BaseProduct -> принимает name, description, price и quantity
-2. Класс Product -> принимает name, description, price и quantity
+2. Класс Product -> принимает name, description, price и quantity (quantity > 0)
 3. Класс Category -> принимает name, description, products
 4. Дочерний класс Smartphone(Product) -> принимает name, description, price, quantity, color, model, memory и efficiency
 5. Дочерний класс LawnGrass(Product) -> принимает name, description, price, quantity, color, country и germination_period
