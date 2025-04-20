@@ -1,3 +1,4 @@
+import pytest
 from _pytest.capture import CaptureResult
 
 from src.classes import Product
@@ -37,3 +38,8 @@ def test_print_mixin(capsys):
     Product("Katana", "Катана", 2500, 5)
     message = capsys.readouterr()
     assert message == CaptureResult(out="Создан объект Product с параметрами: ('Katana', 'Катана', 2500, 5) {}\n", err='')
+
+
+def test_raise():
+    with pytest.raises(ValueError):
+        Product("Katana", "Катана", 2500, 0)
